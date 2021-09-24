@@ -38,12 +38,27 @@ function sumTo(num) {
     return sum;
 }
 
+function ticketMachine(age) {
+    let price = 0;
+    if(age < 18) {
+        price = 10;
+    }else if(age < 65) {
+        price = 20;
+    }else {
+        price = 15;
+    }
+    return price;
+}
+
 function main() {
     let min1 = minimumOfTwo(8, 2);
     let min2 = minimumOfTwo(9, 6);
     let min3 = minOfThree(9, 5, 2);
     let sum1 = sumTo(5);
     let sum2 = sumTo(8);
+    let price1 = ticketMachine(4);
+    let price2 = ticketMachine(48);
+    let price3 = ticketMachine(99);
 }
 
 main();
