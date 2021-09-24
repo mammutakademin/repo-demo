@@ -9,8 +9,7 @@ function minimumOfTwo(num1, num2) {
 }
 
 
-
-function minimumOfThree(num1, num2, num3) {
+function minOfThree(num1, num2, num3) {
     let result;
     let min = minimumOfTwo(num1, num2);
     if (min > num3) {
@@ -24,7 +23,7 @@ function minimumOfThree(num1, num2, num3) {
 function main() {
     let min1 = minimumOfTwo(8, 2);
     let min2 = minimumOfTwo(9, 6);
-    let min3 = minimumOfThree(9,5,2);
+    let min3 = minOfThree(9, 5, 2);
 }
 
 main();
