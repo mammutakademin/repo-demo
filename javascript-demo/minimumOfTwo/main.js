@@ -33,7 +33,7 @@ function minOfThree(num1, num2, num3) {
 function sumTo(num) {
     let sum = 0;
     for(let i = 0; i <= num; i = i + 1) {
-        sum = sum + 1;
+        sum = sum + i;
     }
     return sum;
 }
