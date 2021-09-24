@@ -79,7 +79,7 @@ function fibonacci(input) {
 function main() {
     let min1 = minimumOfTwo(8, 2);
     let min2 = minimumOfTwo(9, 6);
-    let min3 = minOfThree(2, 5, 9);
+    // let min3 = minOfThree(2, 5, 9);
     let price1 = ticketMachine(4);
     let price2 = ticketMachine(48);
     let price3 = ticketMachine(99);
