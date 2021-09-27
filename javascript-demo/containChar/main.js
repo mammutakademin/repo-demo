@@ -1,4 +1,6 @@
 function containChar(text, character){
+    let i=0;
+    let result;
     while(i < text.length()){
         if(text[i] === character){
             result=true;
