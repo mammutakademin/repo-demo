@@ -26,6 +26,6 @@ function indexOfChar(text, character){
 }
 
 function main(){
-    let result = indexOfChar("hey", "y");
+    let result = indexOfChar("hey", "x");
 }
 main();
