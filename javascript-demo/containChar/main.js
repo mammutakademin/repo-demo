@@ -1,17 +1,17 @@
 function containChar(text, character){
     let i=0;
-    let result;
     while(i < text.length){
         if(text[i] === character){
-            result=true;
-        }else{
-            result=false;
+            return true;
+        
+            
         }
         i++;
     }
-    return result;
+    return false;
 }
+
 function main(){
-    containChar("hello world", "d");
+    containChar("superman", "m");
 }
 main();
