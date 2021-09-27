@@ -12,6 +12,6 @@ function containChar(text, character){
 }
 
 function main(){
-    let wifi = containChar("superman", "m");
+    let wifi = containChar("superman", "p");
 }
 main();
