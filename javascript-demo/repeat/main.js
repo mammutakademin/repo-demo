@@ -8,3 +8,4 @@ function repeat(text, repetitions) {
 function main(){
     repeat("hello", 15);
 }
+main()
