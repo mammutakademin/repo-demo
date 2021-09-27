@@ -6,6 +6,6 @@ function repeat(text, repetitions) {
     return textstring;
 }
 function main(){
-    repeat("hello", 15);
+    repeat("hello", 4);
 }
 main()
