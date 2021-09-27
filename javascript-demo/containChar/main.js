@@ -9,3 +9,7 @@ function containChar(text, character){
     }
     return result;
 }
+function main(){
+    containChar("hello world", "d");
+}
+main();
