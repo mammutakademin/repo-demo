@@ -12,6 +12,6 @@ function containChar(text, character){
 }
 
 function main(){
-    containChar("superman", "m");
+    let res = containChar("superman", "m");
 }
 main();
