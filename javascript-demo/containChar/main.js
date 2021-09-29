@@ -16,16 +16,40 @@
 // }
 // main();
 
-function indexOfChar(text, character){
-    for(let i=0; i<text.length; i++){
-        if(text[i]===character){
-            return i;
+// function indexOfChar(text, character){
+//     for(let i=0; i<text.length; i++){
+//         if(text[i]===character){
+//             return i;
+//         }
+//     }
+//     return -1;
+// }
+
+// function main(){
+//     let result = indexOfChar("hey", "x");
+// }
+// main();
+
+function substring(text, start, stop){
+    let out = "";
+    for(let i = start; i <= stop; i++){
+        out += text[i];
+    }
+    return out;
+}
+
+function remove(text, chars){
+    let out = "";
+    let i = 0;
+    let len = chars.length - 1;
+    while(i < text.length){
+        let sub = substring(text, i ,i + len);
+        if(sub == chars){
+            i += text[i]
         }
     }
-    return -1;
 }
 
 function main(){
-    let result = indexOfChar("hey", "x");
+
 }
-main();
