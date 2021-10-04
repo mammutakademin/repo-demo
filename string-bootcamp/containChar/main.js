@@ -5,10 +5,9 @@ function repeat(text, repetitions){
     }
     return newText
 }
-let text = "hello";
-let num = 3;
+let text = "omg";
+let num = 5;
 repeat(text, 3) // => "hellohellohello"
-repeat("omg", 5) // => "omgomgomgomgomg"
 
 // function containChar(text, character){
 //     let i=0;
