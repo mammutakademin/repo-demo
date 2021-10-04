@@ -1,26 +1,22 @@
-function repeat(text, repetitions){
-    let newText = text;
-    for(let i = 1; i < repetitions; i++) {
-        newText += text;
-    }
-    return newText
-}
-let text = "omg";
-let num = 5;
-repeat(text, num) // => "hellohellohello"
-
-// function containChar(text, character){
-//     let i=0;
-//     while(i < text.length){
-//         if(text[i] === character){
-//             return true;
-        
-            
-//         }
-//         i++;
+// function repeat(text, repetitions){
+//     let newText = text;
+//     for(let i = 1; i < repetitions; i++) {
+//         newText += text;
 //     }
-//     return false;
+//     return newText
 // }
+
+
+function containChar(text, character){
+    let i=0;
+    while(i < text.length){
+        if(text[i] === character){
+            return true;
+        }
+        i++;
+    }
+    return false;
+}
 
 // function containsAnywhere(str, otherString){
 //     let j = 0;
@@ -90,10 +86,15 @@ repeat(text, num) // => "hellohellohello"
 // }
 
 function main(){
-    let text = "hello";
-    let num = 3;
-    repeat(text, 3) // => "hellohellohello"
-    repeat("omg", 5) // => "omgomgomgomgomg"
+    // let text = "hello";
+    // let num = 3;
+    // repeat(text, 3) // => "hellohellohello"
+    // repeat("omg", 5) // => "omgomgomgomgomg"
+
+    let str = "Hello world"
+    let char = "o"
+    containsChar(str, char) // => true
+    containsChar(str, "x") // => false
 }
 
 main();
