@@ -7,7 +7,7 @@ function repeat(text, repetitions){
 }
 let text = "omg";
 let num = 5;
-repeat(text, 3) // => "hellohellohello"
+repeat(text, num) // => "hellohellohello"
 
 // function containChar(text, character){
 //     let i=0;
