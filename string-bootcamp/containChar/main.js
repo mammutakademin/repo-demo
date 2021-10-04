@@ -7,7 +7,7 @@
 // }
 
 
-function containChar(text, character){
+function containsChar(text, character){
     let i=0;
     while(i < text.length){
         if(text[i] === character){
