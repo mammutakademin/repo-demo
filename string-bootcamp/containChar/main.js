@@ -1,6 +1,6 @@
 function repeat(text, repetitions){
     let newText = text;
-    for(let i = 1; i < repetition; i++) {
+    for(let i = 1; i < repetitions; i++) {
         newText += text;
     }
     return newText
