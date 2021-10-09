@@ -32,6 +32,22 @@ function minimumOfThree(num1, num2, num3) {
     return min;
 }
 
+function maximumOfFour(num1, num2, num3, num4) {
+    let max;
+    if(num1 > num2) {
+        max = num1;
+    }else {
+        max = num2;
+    }
+    if(num3 > max) {
+        max = num3;
+    }
+    if(num4 > max) {
+        max = num4;
+    }
+    return max;
+}
+
 // function sumTo(num) {
 //     let sum = 0;
 //     let i = 0;
@@ -41,6 +57,14 @@ function minimumOfThree(num1, num2, num3) {
 //     }
 //     return sum;
 // }
+
+function sumTo(num) {
+    let sum = 0;
+    for(let i = 0; i <= num; i = i + 1) {
+        sum = sum + i;
+    }
+    return sum;
+}
 
 function ticketMachine(age) {
     let price = 0;
@@ -54,32 +78,32 @@ function ticketMachine(age) {
     return price;
 }
 
-function sumTo(num) {
-    let sum = 0;
-    for(let i = 0; i <= num; i = i + 1) {
-        sum = sum + i;
-    }
-    return sum;
-}
+// function fibonacci(input) {
+//     let a = 1;
+//     let b = 0;
+//     let output = 0;
+//     let i = 0;
+//     while(i < input) {
+//         output = a + b;
+//         a = b;
+//         b = output;
+//         i = i + 1;
+//     }
+//     return output;
+// }
 
-function fibonacci(input) {
-    let a = 1;
-    let b = 0;
-    let output = 0;
-    let i = 0;
-    while(i < input) {
-        output = a + b;
-        a = b;
-        b = output;
-        i = i + 1;
-    }
-    return output;
+function fib(n) {
+    if(n == 1) { return 1 }
+    if(n == 2) { return 1 }
+    let res = fib(n - 2) + fib(n - 1)
+    return res
 }
 
 function main() {
     let min1 = minimumOfTwo(8, 2);
     let min2 = minimumOfTwo(9, 6);
     // let min3 = minOfThree(2, 5, 9);
+    let max4 = maximumOfFour(12, 72, 9, 4);
     let price1 = ticketMachine(4);
     let price2 = ticketMachine(48);
     let price3 = ticketMachine(99);
@@ -87,7 +111,8 @@ function main() {
     let sum2 = sumTo(6);
     let output1 = fibonacci(10);
     let output2 = fibonacci(3);
-    let output3 = fibonacci(1);   
+    let output3 = fibonacci(1);
+    let result = fib(8);  
 }
 
 main();
