@@ -1,18 +1,27 @@
-function containsElement(arr, element) {
-    for (let i = 0; i < arr.length - 1; i++) {
-        if (arr[i] == element) {
-            return true
-        }
-    }
-    return false
-}
+// function containsElement(arr, element) {
+//     for (let i = 0; i < arr.length - 1; i++) {
+//         if (arr[i] == element) {
+//             return true
+//         }
+//     }
+//     return false
+// }
 
-function main() {
-    let arr = [1, 7, 1, 0, 5]
-    let element = 8
-    let result = containsElement(arr, element)
-}
-main()
+// function containsElement(arr, element){
+//     for(let el of arr){
+//       if(el == element){
+//         return true
+//       }
+//     }
+//     return false
+//   }
+  
+// function main() {
+//     let arr = [1, 7, 1, 0, 5]
+//     let element = 8
+//     let result = containsElement(arr, element)
+// }
+// main()
 
 /*function indexOfElement(arr, element) {
     let output = -1
@@ -22,6 +31,15 @@ main()
         }
     }
     return output
+}
+
+function indexOfElement(arr, element){
+  for(let i=0; i < arr.length; i++){
+    if( arr[i] == element){
+      return i
+    }
+  }
+  return -1
 }
 
 function main() {
@@ -41,6 +59,16 @@ main()*/
     return minimum
 }
 
+function min(numbers){
+  let minimum = numbers[0]
+  for(let i = 1; i < numbers.length; i++){
+    if(numbers[i] < minimum){
+      minimum = numbers[i]
+    }
+  }
+  return minimum
+}
+
 function main() {
     let arr = [1, 7, 1, 0, 5, ]
     let result = min(arr)
@@ -55,6 +83,16 @@ main()*/
         }
     }
     return maximum
+}
+
+function max(numbers){
+  let maximum = numbers[0]
+  for(let i = 1; i < numbers.length; i++){
+    if(numbers[i] > maximum){
+      maximum = numbers[i]
+    }
+  }
+  return maximum
 }
 
 function main() {
@@ -74,6 +112,14 @@ main()*/
     return sum
 }
 
+function sum(numbers){
+  let theSum = 0;
+  for(let number of numbers){
+    theSum += number;
+  }
+  return theSum;
+}
+
 function main() {
     let arr = [1, 7, 1, 0, 5, ]
     let result = sum(arr)
@@ -90,11 +136,36 @@ main()*/
     return medel
 }
 
+function mean(numbers){
+  let theSum = sum(numbers)
+  return theSum / numbers.length
+}
+
 function main() {
     let arr = [1, 7, 1, 0, 5]
     let result = mean(arr)
 }
 main()*/
+
+function remove(array, element){
+    let output = []
+    for(let value of array){
+      if(value != element){
+        output.push(value)
+      }
+    }
+    return output
+  }
+
+  function removeAt(array, index){
+    let output = []
+    for(let i = 0; i < array.length; i++){
+      if(i != index){
+        output.push(array[i])
+      }
+    }
+    return output
+  }
 
 /*function reverse(arr) {
     let arr1 = []
@@ -102,6 +173,14 @@ main()*/
         arr1.push(arr[i])
     }
     return arr1
+}
+
+function reverse(array){
+  let output = []
+  for(let i = array.length-1; i >= 0; i--){
+    output.push(array[i])
+  }
+  return output
 }
 
 function main() {
@@ -121,6 +200,16 @@ main()*/
     return arr1
 }
 
+function filter(array, element){
+  let output = []
+  for(let el of array){
+    if(el == element){
+      output.push(el)
+    }
+  }
+  return output
+}
+
 function main() {
     let arr = [1, 7, 1, 0, 5]
     let element = 1
@@ -136,6 +225,16 @@ main()*/
         }
     }
     return arr1
+}
+
+function exclude(array, element){
+  let output = []
+  for(let el of array){
+    if(el != element){
+      output.push(el)
+    }
+  }
+  return output
 }
 
 function main() {
@@ -166,6 +265,16 @@ function unique(arr) {
     return arr1
 }
 
+function unique(array){
+  let output = []
+  for(let element of array){
+    if(!containsElement(output, element)){
+      output.push(element)
+    }
+  }
+  return output
+}
+
 function main() {
     let arr = [1, 7, 1, 0, 5, 0, 5]
     let result = unique(arr)
@@ -174,6 +283,21 @@ function main() {
 main()
 */
 
+function split(str, delimiter){
+    let output = []
+    let current = ""
+    for(let char of str){
+      if(char == delimiter){
+        output.push(current)
+        current = ""
+      }else{
+        current += char
+      }
+    }
+    return output
+  }
+
+  
 /*
 // split exempel
 let greeting = "hey alla studenter i den gråa fredag"
@@ -234,6 +358,17 @@ reverseStrings(arr)
         words =  words + delimiter + array[i];
     }
     return words;
+}
+
+function join(array, delimiter){
+  let str = "";
+  for(let i = 0; i < array.length; i++){
+    str += element;
+    if(i < array.length-1){
+      str += delimiter;
+    }
+  }
+  return str;
 }
 
 function main() {

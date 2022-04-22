@@ -70,13 +70,13 @@
 //     let i = 0;
 //     while(i < text.length) {
 //         if(text[i] != char) {
-//             newWord += text[i];
+//             newText += text[i];
 //             i++;
 //         }else {
 //             i++;
 //         }
 //     }
-//     return newWord;
+//     return newText;
 //   }
 
 // function replaceChar(text, source, dest){
@@ -84,29 +84,37 @@
 //     let i = 0;
 //     while(i < text.length) {
 //         if(text[i] != source) {
-//             replacedWord += text[i];
+//             replacedText += text[i];
 //         }else {
-//             replacedWord += dest;
+//             replacedText += dest;
 //         }
 //         i++;
 //     }
-//     return replacedWord;
+//     return replacedText;
 // }
 
-function substring(text, start, stop){
-    let substringText = "";
-    let i = start;
-    while(i < stop ) {
-        substringText =+ text[i];
-    }
-    return substringText;
-}
+// function substring(text, start, stop){
+//     let substringText = "";
+//     let i = start;
+//     while(i <= stop ) {
+//         substringText += text[i];
+//         i++;
+//     }
+//     return substringText;
+// }
+
+// function substring(text, start, stop){
+//     let out = "";
+//     for(let i = start; i <= stop; i++){
+//         out += text[i];
+//     }
+//     return out;
+// }
 
 // function containsAnywhere(str, otherString){
 //     let j = 0;
-//     for(let i = 0; i < str.length){
+//     for(let i = 0; i < str.length; i++){
 //         if(str[i] == otherString[j]){
-//             i += 1;
 //             j += 1;
 //         }else {
 //             i += 1;
@@ -119,16 +127,16 @@ function substring(text, start, stop){
 //     }
 // }
 
-// function contains(str, otherString){
-//     let len = otherString.length;
-//     for(let i = 0; i < str.length; i += 1){
-//         let t=substring(str, i, len - 1 + i);
-//         if(t == otherString){
-//             return true;
-//         }
-//     }
-//     return false;
-// }
+function contains(str, otherString){
+    let len = otherString.length;
+    for(let i = 0; i < str.length; i++){
+        let t=substring(str, i, len - 1 + i);
+        if(t == otherString){
+            return true;
+        }
+    }
+    return false;
+}
 
 // function main(){
 //     let wifi = containChar("superman", "y");
@@ -148,14 +156,6 @@ function substring(text, start, stop){
 //     let result = indexOfChar("hey", "x");
 // }
 // main();
-
-// function substring(text, start, stop){
-//     let out = "";
-//     for(let i = start; i <= stop; i++){
-//         out += text[i];
-//     }
-//     return out;
-// }
 
 // function remove(text, chars){
 //     let out = "";
@@ -210,11 +210,22 @@ function main(){
     // replaceChar(str, char1, char2) // => "Helly wyrld"
     // replaceChar(str, " ", "-") // =>  "Hello-world"
 
-    let str = "Hello world"
-    let start = 1
-    let stop = 4
-    substring(str, start, stop) // "ello"
-    substring(str, 0, 3) // Hell
+    // let str = "Hello world"
+    // let start = 1
+    // let stop = 4
+    // substring(str, start, stop) // "ello"
+    // substring(str, 0, 3) // Hell
+
+    // let str = "Hello world"
+    // let char = "world"
+    // containsAnywhere(str, char) // => true
+    // containsAnywhere(str, "omg") // => false
+
+    let str = "Abracadabra"
+    let char = "bra"
+    contains(str, char) // => true
+    contains(str, "omg") // => false
+
 }
 
 main();
